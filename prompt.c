@@ -1,5 +1,8 @@
 #include "shell.h"
 #include <sys/wait.h>
+#include <string.h>
+
+#define MAX_ARGS 10
 /**
  * prompt - prompts the user to insert command
  * @av: argument vector
@@ -8,10 +11,10 @@
 void prompt(char **av, char **env)
 {
 	char *string = NULL;
-	int status, i;
+	int status, i, j;
 	size_t n = 0;
 	ssize_t num_char;
-	char *argv[] = {NULL, NULL};
+	char *argv[MAX_ARGS];
 	pid_t child_pid;
 
 	while (1)
@@ -34,7 +37,10 @@ void prompt(char **av, char **env)
 			i++;
 		}
 
-		argv[0] = string;
+		j = 0;
+		argv[j] = strtok(string, " ");
+		while(argv[j])
+			argv[++j] = strtok(NULL, " ");
 		child_pid = fork();
 		if (child_pid == -1)
 		{

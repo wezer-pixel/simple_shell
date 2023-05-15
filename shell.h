@@ -6,6 +6,5 @@
 #include <unistd.h>
 
 void prompt(char **av, char **env);
-int sub(num1, num2);
 
 #endif
