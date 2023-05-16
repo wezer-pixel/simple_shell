@@ -10,5 +10,6 @@
 void prompt(char **av, char **env);
 void parse_input(char *input, char **argv);
 void execute_command(char **argv, char **env, char **av);
+int path(void);
 
 #endif
