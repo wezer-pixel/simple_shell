@@ -30,13 +30,12 @@ ssize_t get_line(char **lineptr, size_t *n, FILE *stream)
 	{
 		if (i >= (*n - 1))
 		{
-			*n * -2;
 			new_lineptr = (char *)realloc(*lineptr, *n);
 			if (new_lineptr == NULL)
 				return (-1);
 			*lineptr = new_lineptr;
 		}
-		(*lineptr)[i++] = ch;
+		ch = (*lineptr)[i++];
 
 		if (ch == '\n')
 			break;
