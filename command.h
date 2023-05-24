@@ -9,6 +9,6 @@
 #include <sys/wait.h>
 
 
-void execute_command(char** args);
+void execute_command(char **args);
 
 #endif
