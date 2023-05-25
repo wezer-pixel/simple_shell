@@ -1,5 +1,4 @@
-# simple_shell project. Fredrick & Jerry
-The shell undergoes 3 major tasks before executing a command
-- *Initialize*: the shell reads set of configuration files
-- *Interpret*: Reads commands from `stdin` and executes them
-- *Terminate*: After interpretation, the shell performs any shutdown commands, frees any memory and terminates the process.
+# simple_shell
+Simple Shell by fredrick mbanga and jerry juma
+NT FORGET TO EDIT SOME FILE CONTENTS  SO THAT GITHUB REGISTERS CHANGES FROM YOUR SIDE TOO
+
