@@ -49,7 +49,7 @@ int env_set_key(char *key, char *value, data_of_program *data)
 		 data->env[i][key_length] == '=')
 		{
 			is_new_key = 0;
-			
+
 			free(data->env[i]);
 			break;
 		}
