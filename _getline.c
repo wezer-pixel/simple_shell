@@ -1,3 +1,38 @@
+/**
+ * _getline - read one line from the prompt.
+ * @data: struct for the program's data
+ *
+ * This function reads a line from the prompt and performs various operations on it.
+ * It checks for logical operators (&& and ||) and splits the line accordingly.
+ * If there are no more commands in the array or if the previous command was successful (for &&) or unsuccessful (for ||),
+ * it frees the memory allocated in the array and reads from the file descriptor into a buffer.
+ * The lines are then split based on newline or semicolon characters.
+ * The function also checks for && and || operators within each command and splits the line accordingly.
+ * The next command (command 0) is obtained and removed from the array.
+ *
+ * Return: The number of bytes read from the prompt.
+ */
+int _getline(data_of_program *data)
+{
+	// Function implementation
+}
+
+/**
+ * check_logic_ops - checks and split for && and || operators
+ * @array_commands: array of the commands.
+ * @i: index in the array_commands to be checked
+ * @array_operators: array of the logical operators for each previous command
+ *
+ * This function checks each command in the array for the presence of && and || operators.
+ * If an operator is found, it splits the line accordingly and updates the array and operator arrays.
+ * It then returns the index of the last command in the array.
+ *
+ * Return: The index of the last command in the array_commands.
+ */
+int check_logic_ops(char *array_commands[], int i, char array_operators[])
+{
+	// Function implementation
+}
 #include "shell.h"
 
 /**

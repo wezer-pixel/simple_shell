@@ -30,6 +30,20 @@
  * @env: copy of the environ
  * @alias_list: array of pointers with aliases.
  */
+/**
+ * @brief Structure representing information related to a program.
+ */
+typedef struct info
+{
+	char *program_name;     /**< Name of the program. */
+	char *input_line;       /**< Input line entered by the user. */
+	char *command_name;     /**< Name of the command. */
+	int exec_counter;       /**< Execution counter for the program. */
+	int file_descriptor;    /**< File descriptor for the program. */
+	char **tokens;          /**< Array of tokens extracted from the input line. */
+	char **env;             /**< Array of environment variables. */
+	char **alias_list;      /**< Array of aliases for the program. */
+} data_of_program;
 typedef struct info
 {
 	char *program_name;

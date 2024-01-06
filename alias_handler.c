@@ -4,7 +4,12 @@
  * print_alias - handle alias
  * @data: program data struct
  * @alias: name of the alias
- * Return: 0 on sucess, num declared in the args
+ * Return: 0 on success, number declared in the args
+ *
+ * This function prints the value of the specified alias. It searches for the
+ * alias in the alias list stored in the program data struct. If the alias is
+ * found, it prints the alias name and its corresponding value. If no alias is
+ * specified, it prints all the aliases in the alias list.
  */
 int print_alias(data_of_program *data, char *alias)
 {
@@ -38,10 +43,15 @@ int print_alias(data_of_program *data, char *alias)
 }
 
 /**
- * get_alias -handle alias
+ * get_alias - handle alias
  * @data: program's data struct
- * @name: name of the requested alias.
+ * @name: name of the requested alias
  * Return: 0 on success, number declared in the args, NULL if not found
+ *
+ * This function retrieves the value of the specified alias. It searches for
+ * the alias in the alias list stored in the program data struct. If the alias
+ * is found, it returns the value of the alias. If the alias is not found, it
+ * returns NULL.
  */
 char *get_alias(data_of_program *data, char *name)
 {
@@ -64,11 +74,16 @@ char *get_alias(data_of_program *data, char *name)
 
 }
 
+
 /**
- * set_alias - creates alias, overides if exists
+ * set_alias - creates alias, overrides if exists
  * @alias_string: alias to be set
  * @data: program data struct
- * Return: 0 on sucess, number declared in args
+ * Return: 0 on success, number declared in args
+ *
+ * This function sets the value of the specified alias. It creates a new alias
+ * if the alias does not already exist, or overrides the existing alias if it
+ * does exist. The alias is stored in the alias list in the program data struct.
  */
 int set_alias(char *alias_string, data_of_program *data)
 {
